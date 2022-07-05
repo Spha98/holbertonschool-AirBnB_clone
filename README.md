@@ -119,8 +119,9 @@ $
 Please feel free to contact us regarding any matter (specially about mistakes, recomendations and gramar errors)
 
 <p align="center">
-Ernest Mqcina -
+Ernest Mqcina - Danisile Jiyane
 <a href="https://github.com/Spha98">
+<a href="https://github.com/Danisile">
 </a>
 </p>
 
