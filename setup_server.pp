@@ -62,3 +62,23 @@ file { '/etc/nginx/sites-available/default':
   path => '/usr/bin/:/usr/local/bin/:/bin/'
 }
 
+# Set up /data directory to host API and Flask app
+file { '/data':
+  ensure  => 'directory'
+}
+
+-> file { '/data/api':
+  ensure => 'directory'
+}
+
+-> file { '/data/models':
+  ensure => 'directory'
+}
+
+-> file { '/data/web_flask':
+  ensure => 'directory'
+}
+
+-> exec { 'chown -R ubuntu:ubuntu /data/':
+  path => '/usr/bin/:/usr/local/bin/:/bin/'
+}

@@ -10,7 +10,25 @@ from api.v1.views import app_views
 @swag_from("../apidocs/status/status.yml")
 def status():
     """Returns the server status.
+
     Returns:
         JSON object with the current server status.
     """
     return jsonify({"status": "OK"})
+
+
+@app_views.route("/stats")
+@swag_from("../apidocs/stats/stats.yml")
+def stats():
+    """Retrives the count of each object type.
+
+    Returns:
+        JSON object with the number of objects by type."""
+    return jsonify({
+        "amenities": storage.count("Amenity"),
+        "cities": storage.count("City"),
+        "places": storage.count("Place"),
+        "reviews": storage.count("Review"),
+        "states": storage.count("State"),
+        "users": storage.count("User")
+    })

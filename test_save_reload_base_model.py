@@ -8,4 +8,9 @@ for obj_id in all_objs.keys():
     obj = all_objs[obj_id]
     print(obj)
 
-
+print("-- Create a new object --")
+my_model = BaseModel()
+my_model.name = "Holberton Medellin COLOMBIA"
+my_model.my_number = 5261
+my_model.save()
+print(my_model)

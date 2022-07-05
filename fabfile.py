@@ -97,3 +97,15 @@ def restart(connection):
     print("boom! All deployed!")
 
 
+@task(hosts=hosts)
+def deploy(connection, folder="all"):
+    """Archives, distributes and runs the Gunicorn instance of a folder on the server.
+
+    Args:
+        folder (str): The name of the folder to pack and upload.
+    """
+    if folder == "all":
+        [pack_and_upload(connection, f) for f in ["models", "api", "web_flask"]]
+    else:
+        pack_and_upload(connection, folder)
+    restart(connection)

@@ -3,4 +3,9 @@ Returns the server status.
 tags:
   -  "status"
 responses:
-
+  200:
+    description: The server status.
+    example:
+      {
+        "status": "OK"
+      }

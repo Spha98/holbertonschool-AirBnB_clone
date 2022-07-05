@@ -12,4 +12,15 @@ parameters:
     schema:
       type: string
 responses:
-
+  200:
+    description: The retrieved state.
+    example:
+      {
+        "__class__":"State",
+        "created_at":"2019-05-01T21:32:39.000000",
+        "id":"067d57b4-7060-4d8d-aaa8-dfa3f72c8613",
+        "name":"Washington",
+        "updated_at":"2019-05-01T21:32:39.000000"
+      }
+  404:
+    description: "Not found"

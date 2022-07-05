@@ -61,7 +61,7 @@ We will not implement all the features, just some of them to cover all the funda
 
 ## Install
 ```shell
-git clone https://github.com/Spha98/holbertonschool-AirBnB_clone.git
+git clone https://github.com/Ernest Mgqina/holbertonschool-AirBnB_clone.git
 ```
 
 ## Execution
@@ -119,12 +119,16 @@ $
 Please feel free to contact us regarding any matter (specially about mistakes, recomendations and gramar errors)
 
 <p align="center">
-Ernest Mqcina - Danisile Jiyane
+Ernest Mgqina -
 <a href="https://github.com/Spha98">
-<a href="https://github.com/Danisile">
 </a>
 </p>
 
 
+
+<p align="center">
+Danisile Jiyane -
+<a href="https://github.com/Danisile">
+</a>
 
 </p>

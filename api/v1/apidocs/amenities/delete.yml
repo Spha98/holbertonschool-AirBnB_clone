@@ -11,3 +11,10 @@ parameters:
     required: true
     schema:
       type: "string"
+responses:
+  200:
+    description: "An empty object representing the deleted amenity."
+    schema:
+      type: "object"
+  404:
+    description: "Not found"

@@ -12,6 +12,7 @@ from models.amenity import Amenity
 @swag_from("../apidocs/amenities/post.yml", methods=["POST"])
 def amenities():
     """Defines GET and POST methods for the /amenities route.
+
     GET - Retrieves a list of all Amenity objects.
     POST - Creates a Amenity.
     """
@@ -36,3 +37,30 @@ def amenities():
 @swag_from("../apidocs/amenities/put.yml", methods=["PUT"])
 def amenity_id(amenity_id):
     """Defines GET, PUT and DELETE methods for a specific ID on /amenities.
+
+    GET - Retrieves an Amenity object with the given id.
+    PUT - Updates an Amenity object with the given id using JSON key/values.
+    DELETE - Deletes an Amenity object with the given id.
+    """
+    amenity = storage.get("Amenity", amenity_id)
+    if amenity is None:
+        abort(404)
+
+    # GET method
+    if request.method == "GET":
+        return jsonify(amenity.to_dict())
+
+    # DELETE method
+    elif request.method == "DELETE":
+        storage.delete(amenity)
+        storage.save()
+        return jsonify({})
+
+    # PUT method
+    data = request.get_json(silent=True)
+    if data is None:
+        return "Not a JSON", 400
+    avoid = {"id", "created_at", "updated_at"}
+    [setattr(amenity, k, v) for k, v in data.items() if k not in avoid]
+    amenity.save()
+    return jsonify(amenity.to_dict())
