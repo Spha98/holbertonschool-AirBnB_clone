@@ -1,0 +1,13 @@
+Retrieves all amenities for a given place.
+---
+tags:
+  -  "places_amenities"
+parameters:
+  - in: path
+    name: place_id
+    description: "The ID of the place to retrieve amenities for."
+    required: true
+    schema:
+      type: string
+responses:
+

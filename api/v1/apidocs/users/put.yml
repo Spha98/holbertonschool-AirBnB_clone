@@ -1,0 +1,33 @@
+Updates a given user with given attributes.
+---
+tags:
+  -  "users"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: user_id
+    description: "The ID of the user to update."
+    required: true
+    schema:
+      type: string
+  - in: query
+    name: password
+    description: "The new password of the user."
+    required: false
+    schema:
+      type: string
+  - in: query
+    name: first_name
+    description: "The new first name of the user."
+    required: false
+    schema:
+      type: string
+  - in: query
+    name: last_name
+    description: "The new last name of the user."
+    required: false
+    schema:
+      type: string
+responses:
+ 

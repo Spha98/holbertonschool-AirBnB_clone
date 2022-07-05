@@ -1,0 +1,15 @@
+Retrieve a user with a given ID.
+---
+tags:
+  -  "users"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: user_id
+    description: "The ID of the user to retrieve."
+    required: true
+    schema:
+      type: string
+responses:
+

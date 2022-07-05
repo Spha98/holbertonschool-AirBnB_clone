@@ -1,0 +1,22 @@
+Retrieve a city with a given ID.
+---
+tags:
+  -  "cities"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: city_id
+    description: "The ID of the city to retrieve."
+    required: true
+    schema:
+      type: string
+responses:
+  200:
+    description: The retrieved city.
+    example:
+      {
+
+      }
+  404:
+    description: "Not found"

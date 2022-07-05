@@ -1,0 +1,15 @@
+Retrieve a place with a given ID.
+---
+tags:
+  -  "places"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: place_id
+    description: "The ID of the place to retrieve."
+    required: true
+    schema:
+      type: string
+responses:
+

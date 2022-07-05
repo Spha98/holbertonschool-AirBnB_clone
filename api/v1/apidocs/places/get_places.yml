@@ -1,0 +1,13 @@
+Retrieves all places for a given city.
+---
+tags:
+  -  "places"
+parameters:
+  - in: path
+    name: city_id
+    description: "The ID of the city to retrieve places for."
+    required: true
+    schema:
+      type: string
+responses:
+ 

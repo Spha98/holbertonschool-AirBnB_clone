@@ -1,0 +1,13 @@
+Retrieves all reviews for a given place.
+---
+tags:
+  -  "reviews"
+parameters:
+  - in: path
+    name: place_id
+    description: "The ID of the place to retrieve reviews for."
+    required: true
+    schema:
+      type: string
+responses:
+

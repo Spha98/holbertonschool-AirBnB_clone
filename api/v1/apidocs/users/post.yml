@@ -1,0 +1,32 @@
+Creates a new user.
+---
+tags:
+  -  "users"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+parameters:
+  - in: query
+    name: email
+    description: "The email of the new user."
+    required: true
+    schema:
+      type: string
+  - in: query
+    name: password
+    description: "The password of the new user."
+  - in: query
+    name: first_name
+    description: "The first name of the new user."
+    required: false
+    schema:
+      type: string
+  - in: query
+    name: last_name
+    description: "The last name of the new user."
+    required: false
+    schema:
+      type: string
+responses:
+ 

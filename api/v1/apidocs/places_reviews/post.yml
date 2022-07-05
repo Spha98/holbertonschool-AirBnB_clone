@@ -1,0 +1,29 @@
+Creates a new review.
+---
+tags:
+  -  "reviews"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: place_id
+    description: "The ID of the related place."
+    required: true
+    schema:
+      type: string
+  - in: query
+    name: user_id
+    description: "The ID of the related user."
+    required: true
+    schema:
+      type: string
+  - in: query
+    name: text
+    description: "The text of the new place."
+    required: true
+    schema:
+      type: string
+responses:
+  

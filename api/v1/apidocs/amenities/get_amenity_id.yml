@@ -1,0 +1,15 @@
+
+Retrieve an amenity with a given ID.
+---
+tags:
+  -  "amenities"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: amenity_id
+    description: "The ID of the amenity to retrieve."
+    required: true
+    schema:
+      type: string
+responses:

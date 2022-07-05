@@ -1,0 +1,7 @@
+Retrieves all users.
+---
+tags:
+  -  "users"
+responses:
+  200:
+   

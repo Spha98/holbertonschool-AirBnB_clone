@@ -1,0 +1,6 @@
+Retrieves all states.
+---
+tags:
+  -  "states"
+responses:
+  200:

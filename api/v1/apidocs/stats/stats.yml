@@ -1,0 +1,6 @@
+Retrieves the counts of each object type.
+---
+tags:
+  -  "stats"
+responses:
+  200:

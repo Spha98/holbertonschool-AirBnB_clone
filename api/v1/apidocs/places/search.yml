@@ -1,0 +1,35 @@
+Retrieves places based on given parameters.
+---
+tags:
+  -  "places"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+parameters:
+  - in: query
+    name: states
+    description: "A list of state ID's."
+    required: false
+    schema:
+      type: array
+      items:
+        type: string
+  - in: query
+    name: cities
+    description: "A list of city ID's."
+    required: false
+    schema:
+      type: array
+      items:
+        type: string
+  - in: query
+    name: amenities
+    description: "A list of amenity ID's."
+    required: false
+    schema:
+      type: array
+      items:
+        type: string
+responses:
+ 

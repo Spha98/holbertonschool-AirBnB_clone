@@ -1,0 +1,15 @@
+Retrieve a state with a given ID.
+---
+tags:
+  -  "states"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: state_id
+    description: "The ID of the state to retrieve."
+    required: true
+    schema:
+      type: string
+responses:
+

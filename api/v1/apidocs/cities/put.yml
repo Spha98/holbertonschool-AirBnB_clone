@@ -1,0 +1,20 @@
+Updates a given city with given attributes.
+---
+tags:
+  -  "cities"
+produces:
+  - "application/json"
+parameters:
+  - in: path
+    name: city_id
+    description: "The ID of the city to update."
+    required: true
+    schema:
+      type: string
+  - in: query
+    name: name
+    description: "The new name of the city."
+    schema:
+      type: string
+responses:
+ 

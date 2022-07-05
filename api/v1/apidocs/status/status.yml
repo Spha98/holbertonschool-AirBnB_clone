@@ -1,0 +1,6 @@
+Returns the server status.
+---
+tags:
+  -  "status"
+responses:
+
